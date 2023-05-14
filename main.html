@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <section class="BaiTapMang w-75 mx-auto mt-5">
+    <div class="addnumber w-50 d-flex ">
+      <input class="flex-grow-1 mr-2 p-2" type="number" id="number" placeholder="nhập số n">
+      <button type="button" id="addNumber" class="btn
+             btn-success">Thêm số</button>
+
+    </div>
+    <div class="alert alert-danger mt-4" role="alert">
+      👉<span id="showMang"></span>
+    </div>
+    <div class="accordion" id="my_collapse_1">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn  btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne">
+              Bài 1: Tổng số dương
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#my_collapse_1">
+          <div class="card-body">
+            <button class="btn btn-primary" type="button" id="TinhTong">Tính tổng</button>
+            <div class="alert alert-primary mt-3" role="alert">
+              👉<span id="showTongSoDuong"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseTwo">
+              Bài 2: Đếm số dương
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#my_collapse_1">
+          <div class="card-body">
+            <button class="btn btn-primary" id="DemSo">Đếm số</button>
+            <div class="alert alert-primary mt-3" role="alert">
+              👉<span id="showDemSo"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseThree">
+              Bài 3: Tìm số nhỏ nhất
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" data-parent="#my_collapse_1">
+          <div class="card-body">
+            <button class="btn btn-primary" id="timSoNhoNhat">Tìm số nhỏ nhất</button>
+            <div class="alert alert-primary mt-3" role="alert">
+              👉<span id="showSoNhoNhat"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="heading">
+          <h2 class="mb-0">
+            <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseFour">
+              Bài 4: Tìm số dương nhỏ nhất
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFour" class="collapse" data-parent="#my_collapse_1">
+          <div class="card-body">
+            <button class="btn btn-primary" id="timSoDuongNhoNhat">Tìm số dương nhỏ nhất</button>
+            <div class="alert alert-primary mt-3" role="alert">
+              👉<span id="showSoDuongNhoNhat"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="heading">
+          <h2 class="mb-0">
+            <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseFive">
+              Bài 5: Tìm số chẵn cuối cùng
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFive" class="collapse" data-parent="#my_collapse_1">
+          <div class="card-body">
+            <button class="btn btn-primary" id="timSoChan">Tìm số chẵn</button>
+            <div class="alert alert-primary mt-3" role="alert">
+              👉<span id="showSoChan"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="heading">
+          <h2 class="mb-0">
+            <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseSix">
+              Bài 6: Đổi chỗ
+            </button>
+          </h2>
+        </div>
+        <div id="collapseSix" class="collapse" data-parent="#my_collapse_1">
+          <div class="card-body">
+            <input class="flex-grow-1 mr-2 p-2" type="number" id="numpos1" placeholder="nhập vị trí thứ 1" min="0">
+            <input class="flex-grow-1 mr-2 p-2" type="number" id="numpos2" placeholder="nhập vị trí thứ 2" min="0">
+            <button class="btn btn-primary d-block mt-3" id="DoiCho">Đổi chỗ</button>
+            <div class="alert alert-primary mt-3" role="alert">
+              👉<span id="showDoiCho"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="heading">
+          <h2 class="mb-0">
+            <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseSeven">
+              Bài 7: Sắp xếp tăng dần
+            </button>
+          </h2>
+        </div>
+        <div id="collapseSeven" class="collapse" data-parent="#my_collapse_1">
+          <div class="card-body">
+            <button class="btn btn-primary" id="SapXep">Sắp xếp</button>
+            <div class="alert alert-primary mt-3" role="alert">
+              👉<span id="showSapXep"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="heading">
+          <h2 class="mb-0">
+            <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseEight">
+              Bài 8: Tìm số nguyên tố đầu tiên
+            </button>
+          </h2>
+        </div>
+        <div id="collapseEight" class="collapse" data-parent="#my_collapse_1">
+          <div class="card-body">
+            <button class="btn btn-primary" id="SoNguyenTo">Tìm số nguyên tố</button>
+            <div class="alert alert-primary mt-3" role="alert">
+              👉<span id="showSoNguyenTo"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="heading">
+          <h2 class="mb-0">
+            <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseNine">
+              Bài 9: Đếm số nguyên
+            </button>
+          </h2>
+        </div>
+        <div id="collapseNine" class="collapse" data-parent="#my_collapse_1">
+          <div class="card-body">
+            <button class="btn btn-primary" id="demSoNguyen">Đếm số nguyên</button>
+            <div class="alert alert-primary mt-3" role="alert">
+              👉<span id="showDemSoNguyen"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="heading">
+          <h2 class="mb-0">
+            <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseTen">
+              Bài 10: So sánh số lượng âm và dương
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTen" class="collapse" data-parent="#my_collapse_1">
+          <div class="card-body">
+            <button class="btn btn-primary" id="SoSanh">So sánh</button>
+            <div class="alert alert-primary mt-3" role="alert">
+              👉<span id="showSoSanh"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  
+
+
+  </section>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+ 
+</body>
+
+</html>
